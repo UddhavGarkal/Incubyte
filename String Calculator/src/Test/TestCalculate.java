@@ -24,4 +24,6 @@ public class TestCalculate {
 	public void twoNumbersCommaDelimitedReturnsSum() {
 		assertEquals(calculator.calculate("1,2"), 3);
 	}
+	
+	
 }
