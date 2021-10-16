@@ -22,6 +22,10 @@ public class Calculator {
 		illegalInput(numbers);
 		int sum = 0;
 		for (String current : numbers) {
+			if (stringToInt(current) > 1000) {
+				continue;
+
+			}
 			sum += stringToInt(current);
 		}
 		return sum;

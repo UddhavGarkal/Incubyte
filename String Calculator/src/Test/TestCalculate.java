@@ -39,7 +39,7 @@ public class TestCalculate {
 	}
 
 	public void ignoresNumbersGreaterThanAThousand() throws Exception {
-		assertEquals(calculator.calculate("10,20,1000"), 30);
+		assertEquals(calculator.calculate("10,20,1001"), 30);
 
 	}
 }
