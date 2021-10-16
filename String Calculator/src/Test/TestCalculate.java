@@ -25,5 +25,7 @@ public class TestCalculate {
 		assertEquals(calculator.calculate("1,2"), 3);
 	}
 	
-	
+	public void twoNumbersNewLineDelimitedReturnsSum() {
+		assertEquals(calculator.calculate("1\n2"), 3);
+	}
 }
