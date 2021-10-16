@@ -4,7 +4,7 @@ public class Calculator {
 
 	private final String delimiter = ",|\n";
 
-	public int calculate(String input) {
+	public int calculate(String input) throws Exception {
 		String[] numbers = input.split(delimiter);
 
 		if (isEmpty(input)) {
@@ -18,12 +18,22 @@ public class Calculator {
 
 	}
 
-	public int Add(String[] numbers) {
+	public int Add(String[] numbers) throws Exception {
+		illegalInput(numbers);
 		int sum = 0;
 		for (String current : numbers) {
-			sum += Integer.parseInt(current);
+			sum += stringToInt(current);
 		}
 		return sum;
+	}
+
+	private void illegalInput(String[] numbers) throws Exception {
+
+		for (String current : numbers) {
+			if (stringToInt(current) < 0) {
+				throw new Exception("Negative input");
+			}
+		}
 	}
 
 	private boolean isEmpty(String input) {

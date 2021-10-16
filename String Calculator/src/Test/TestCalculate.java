@@ -13,28 +13,28 @@ public class TestCalculate {
 		calculator = new Calculator();
 	}
 
-	public void emptyStringReturnsZero() {
+	public void emptyStringReturnsZero() throws Exception {
 		assertEquals(calculator.calculate(""), 0);
 	}
 
-	public void singleValueIsReplied() {
+	public void singleValueIsReplied() throws Exception {
 		assertEquals(calculator.calculate("1"), 1);
 	}
 
-	public void twoNumbersCommaDelimitedReturnsSum() {
+	public void twoNumbersCommaDelimitedReturnsSum() throws Exception {
 		assertEquals(calculator.calculate("1,2"), 3);
 	}
 
-	public void twoNumbersNewLineDelimitedReturnsSum() {
+	public void twoNumbersNewLineDelimitedReturnsSum() throws Exception {
 		assertEquals(calculator.calculate("1\n2"), 3);
 	}
 
-	public void threeNumbersDelimitedBothWaysReturnsSum() {
+	public void threeNumbersDelimitedBothWaysReturnsSum() throws Exception {
 		assertEquals(calculator.calculate("1,2,3"), 6);
 	}
 
 	@Test(expectedExceptions = Exception.class)
-	public void negativeInputReturnsException() {
+	public void negativeInputReturnsException() throws Exception {
 		calculator.calculate("-1");
 	}
 }
