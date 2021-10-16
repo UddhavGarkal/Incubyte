@@ -24,12 +24,17 @@ public class TestCalculate {
 	public void twoNumbersCommaDelimitedReturnsSum() {
 		assertEquals(calculator.calculate("1,2"), 3);
 	}
-	
+
 	public void twoNumbersNewLineDelimitedReturnsSum() {
 		assertEquals(calculator.calculate("1\n2"), 3);
 	}
-	
+
 	public void threeNumbersDelimitedBothWaysReturnsSum() {
 		assertEquals(calculator.calculate("1,2,3"), 6);
+	}
+
+	@Test(expectedExceptions = Exception.class)
+	public void negativeInputReturnsException() {
+		calculator.calculate("-1");
 	}
 }
