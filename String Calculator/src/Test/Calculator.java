@@ -20,6 +20,11 @@ public class Calculator {
 
 	public int Add(String[] numbers) throws Exception {
 		illegalInput(numbers);
+
+		return calculateValues(numbers);
+	}
+
+	private int calculateValues(String[] numbers) {
 		int sum = 0;
 		for (String current : numbers) {
 			if (stringToInt(current) > 1000) {
@@ -35,7 +40,7 @@ public class Calculator {
 
 		for (String current : numbers) {
 			if (stringToInt(current) < 0) {
-				throw new Exception("Negative input");
+				throw new Exception("negatives not allowed");
 			}
 		}
 	}
