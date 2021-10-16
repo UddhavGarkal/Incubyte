@@ -1,8 +1,11 @@
 package Test;
 
 public class Calculator {
+
+	private final String delimiter =",|\n";
+	
 	public int calculate(String input) {
-		String[] numbers = input.split(",|\n");
+		String[] numbers = input.split(delimiter);
 
 		if (isEmpty(input)) {
 			return 0;
