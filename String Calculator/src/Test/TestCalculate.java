@@ -20,4 +20,8 @@ public class TestCalculate {
 	public void singleValueIsReplied() {
 		assertEquals(calculator.calculate("1"), 1);
 	}
+
+	public void twoNumbersCommaDelimitesReturnsSum() {
+		assertEquals(calculator.calculate("1,2"), 3);
+	}
 }
