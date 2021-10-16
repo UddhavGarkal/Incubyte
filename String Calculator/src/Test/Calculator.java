@@ -2,8 +2,8 @@ package Test;
 
 public class Calculator {
 
-	private final String delimiter =",|\n";
-	
+	private final String delimiter = ",|\n";
+
 	public int calculate(String input) {
 		String[] numbers = input.split(delimiter);
 
@@ -13,13 +13,17 @@ public class Calculator {
 		if (input.length() == 1) {
 			return stringToInt(input);
 		} else {
-			return Add(numbers[0], numbers[1]);
+			return Add(numbers);
 		}
 
 	}
 
-	public int Add(String numA, String numB) {
-		return Integer.parseInt(numA) + Integer.parseInt(numB);
+	public int Add(String[] numbers) {
+		int sum = 0;
+		for (int current = 0; current < numbers.length; current++) {
+			sum += Integer.parseInt(numbers[current]);
+		}
+		return sum;
 	}
 
 	private boolean isEmpty(String input) {
