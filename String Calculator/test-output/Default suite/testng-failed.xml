@@ -6,7 +6,7 @@
       <class name="Test.TestCalculate">
         <methods>
           <include name="init"/>
-          <include name="twoNumbersNewLineDelimitedReturnsSum"/>
+          <include name="threeNumbersDelimitedBothWaysReturnsSum"/>
         </methods>
       </class> <!-- Test.TestCalculate -->
     </classes>
